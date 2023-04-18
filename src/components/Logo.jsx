@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { motion } from "framer-motion";
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const Container = styled.div`
   position: absolute;
@@ -41,7 +41,7 @@ const Text = styled(motion.span)`
 const pathVariants = {
   hidden: {
     opacity: 0,
-    pathLength: 0,
+    pathLength: 0
   },
   visible: {
     opacity: 1,
@@ -50,14 +50,14 @@ const pathVariants = {
     transition: {
       duration: 2,
       delay: 3, // 0
-      ease: 'easeInOut',
-    },
-  },
+      ease: "easeInOut"
+    }
+  }
 };
 const textVariants = {
   hidden: {
     opacity: 0,
-    x: -50,
+    x: -50
   },
   visible: {
     opacity: 1,
@@ -66,9 +66,9 @@ const textVariants = {
     transition: {
       duration: 2,
       delay: 5, // 2
-      ease: 'easeInOut',
-    },
-  },
+      ease: "easeInOut"
+    }
+  }
 };
 
 const Logo = () => {
@@ -95,7 +95,7 @@ const Logo = () => {
         </svg>
 
         <Text variants={textVariants} initial="hidden" animate="visible">
-          Wibe Studio
+          Kaptose Fashions
         </Text>
       </Link>
     </Container>

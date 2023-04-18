@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import styled from 'styled-components';
+import { motion } from "framer-motion";
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled(motion.div)`
   position: absolute;
@@ -8,8 +8,8 @@ const Container = styled(motion.div)`
   left: 0;
   right: 0;
   bottom: 0;
-touch-action: none;
-overflow: hidden;
+  touch-action: none;
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
 
@@ -25,7 +25,7 @@ overflow: hidden;
   width: 100%;
 
   @media (max-width: 48em) {
-    svg{
+    svg {
       width: 20vw;
     }
   }
@@ -48,7 +48,7 @@ overflow: hidden;
 const pathVariants = {
   hidden: {
     opacity: 0,
-    pathLength: 0,
+    pathLength: 0
   },
   visible: {
     opacity: 1,
@@ -57,13 +57,13 @@ const pathVariants = {
     transition: {
       duration: 2,
       // yoyo: Infinity,
-      ease: 'easeInOut',
-    },
-  },
+      ease: "easeInOut"
+    }
+  }
 };
 const textVariants = {
   hidden: {
-    opacity: 0,
+    opacity: 0
   },
   visible: {
     opacity: 1,
@@ -72,9 +72,9 @@ const textVariants = {
       duration: 1,
       yoyo: Infinity,
 
-      ease: 'easeInOut',
-    },
-  },
+      ease: "easeInOut"
+    }
+  }
 };
 
 const Text = styled(motion.span)`
@@ -84,7 +84,6 @@ const Text = styled(motion.span)`
 
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontlg};
-
   }
 `;
 
@@ -92,7 +91,7 @@ const Loader = () => {
   return (
     <Container
       initial={{ y: 0, opacity: 1 }}
-      exit={{ y: '100%', opacity: 0 }}
+      exit={{ y: "100%", opacity: 0 }}
       transition={{ duration: 2 }}
     >
       {/* <img src={star} alt="Wibe Fashion" /> */}
@@ -114,7 +113,7 @@ const Loader = () => {
         </g>
       </svg>
       <Text variants={textVariants} initial="hidden" animate="visible">
-        Wibe Studio
+        Kaptose Fashions
       </Text>
     </Container>
   );
